@@ -26,3 +26,9 @@
 .new-post-button{
   margin-bottom: 8px !important;
 }
+
+.long-text{
+  word-wrap: break-word;
+  overflow: auto;
+  max-width: 100%;
+}

@@ -1,0 +1,21 @@
+<div class="ui grid">
+  <div class="ui sixteen wide column">
+    <div class="ui cards">
+        <div class="ui fluid card">
+          <div class="content">
+            <div class="header"> By - <%= @post.user_id %> </div>
+            <div class="segment card-subtitle">
+              <div class="ui sub header"> <%= @post.title %> </div>
+              <div class="description no-decoration">
+                <%= @post.summary %> 
+              </div>
+              <div class="ui divider"></div>
+              <div class="description no-decoration long-text">
+                <%= simple_format @post.description %>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
