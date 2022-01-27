@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post 'post/new', to: 'posts#create'
   get 'post', to: 'posts#edit'
   patch 'post', to: 'posts#update'
+  delete 'post', to: 'posts#destroy'
 
   #Users Routes
   get 'user/index', to: 'users#index'

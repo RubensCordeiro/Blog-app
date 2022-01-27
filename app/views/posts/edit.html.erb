@@ -22,6 +22,8 @@
       </div>
       </div>
       <%= f.submit "Edit post", class: "ui button" %>
+      <%= link_to "Delete post", post_path(id: @post.id), method: :delete,
+       class: "ui red button" %>
     <% end %>
   </div>
   <div class="four wide column"></div>

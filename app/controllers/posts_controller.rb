@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :check_ownership, only: [:show]
-  before_action :set_post, only: [:edit, :update]
+  before_action :set_post, only: [:edit, :update, :destroy]
 
   def new
   end
@@ -22,7 +22,16 @@ class PostsController < ApplicationController
     if @post.update(post_params)
       flash[:notice] = "Post updated successfully"
     else
-      flash[:alert] = "Something went wrong, your post was not created"
+      flash[:alert] = "Something went wrong, your post was not updated"
+    end
+    redirect_to user_posts_path
+  end
+
+  def destroy
+    if @post.destroy
+      flash[:notice] = "Post deleted successfully"
+    else
+      flash[:alert] = "Something went wrong, your post was not deleted"
     end
     redirect_to user_posts_path
   end
