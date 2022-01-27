@@ -4,7 +4,7 @@
     <div class="ui cards">
 
       <% @posts.each do |post| %>
-        <a href=" <%= posts_show_path(post_id: post.id) %> " class="ui raised fluid card">
+        <a href=" <%= post_path(id: post.id) %> " class="ui raised fluid card">
           <div class="content">
             <div class="header"><%= post.user_id %></div>
             <div class="meta">Friend</div>

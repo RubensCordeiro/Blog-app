@@ -5,11 +5,12 @@ Rails.application.routes.draw do
   root to: 'welcome#index'
 
   #Posts routes
-  get 'posts/new', to: 'posts#new'
-  post 'posts/new', to: 'posts#create'
-  get 'posts/show', to: 'posts#show'
+  get 'post/new', to: 'posts#new'
+  post 'post/new', to: 'posts#create'
+  get 'post', to: 'posts#edit'
+  patch 'post', to: 'posts#update'
 
   #Users Routes
-  get 'users/index', to: 'users#index'
-  get 'users/posts', to: 'users#my_posts'
+  get 'user/index', to: 'users#index'
+  get 'user/posts', to: 'users#my_posts'
 end
