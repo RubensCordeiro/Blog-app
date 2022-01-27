@@ -2,24 +2,27 @@
   <div class="ui one wide column"></div>
   <div class="ui thirteen wide column">
     <div class="ui cards">
-
       <% @posts.each do |post| %>
-        <a href=" <%= post_path(id: post.id) %> " class="ui raised fluid card">
+        <div class="ui fluid card">
           <div class="content">
-            <div class="header"><%= post.user_id %></div>
+            <div class="header"> By - <%= post.user_id %> </div>
             <div class="meta">Friend</div>
             <div class="segment card-subtitle">
               <div class="ui sub header"> <%= post.title %> </div>
               <div class="description no-decoration">
-                <%= post.summary %>
+                <%= post.summary %> 
               </div>
             </div>
           </div>
-        </a>
+          <div class="segment left aligned delete-button">
+            <div class="ui red button">
+              <%= link_to "Delete Post", post_path(id: post.id), method: :delete %>
+            </div>
+          </div>
+        </div>
       <% end %>
-
     </div>
   </div>
-  <div class="ui two wide column">
-  </div>
+  <div class="ui two wide column"></div>
 </div>
+
