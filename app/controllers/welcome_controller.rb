@@ -4,4 +4,8 @@ class WelcomeController < ApplicationController
   def index
   end
 
+  def timeline
+    @posts = Post.where(public: true).order('created_at DESC')
+  end
+
 end

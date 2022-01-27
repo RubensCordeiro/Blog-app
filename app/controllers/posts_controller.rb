@@ -1,8 +1,11 @@
 class PostsController < ApplicationController
-  before_action :check_ownership, only: [:show]
-  before_action :set_post, only: [:edit, :update, :destroy]
+  before_action :check_ownership, only: [:edit, :update, :destroy]
+  before_action :set_post, only: [:edit, :update, :destroy, :show]
 
   def new
+  end
+
+  def show
   end
 
   def create
@@ -57,7 +60,7 @@ class PostsController < ApplicationController
   end
 
   def check_ownership
-    post_id = params[:post_id].to_i
+    post_id = post_params[:id] || params[:id]
     if current_user.id == Post.find(post_id).user_id
       @post = Post.find(post_id)
       return @post

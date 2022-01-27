@@ -3,11 +3,13 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   root to: 'welcome#index'
+  get 'timeline', to: 'welcome#timeline'
 
   #Posts routes
+  get 'post', to: 'posts#show'
   get 'post/new', to: 'posts#new'
   post 'post/new', to: 'posts#create'
-  get 'post', to: 'posts#edit'
+  get 'post/edit', to: 'posts#edit'
   patch 'post', to: 'posts#update'
   delete 'post', to: 'posts#destroy'
 

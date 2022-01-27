@@ -5,7 +5,7 @@
     </div>
     <div class="ui cards">
       <% @posts.each do |post| %>
-        <div class="ui fluid card">
+        <a class="ui fluid card", href=" <%= post_path(id: post.id) %> ">
           <div class="content">
             <div class="header"> By - <%= post.user_id %> </div>
             <div class="meta"> <%= post.public == true ? "Public" : "Not Public" %> </div>
@@ -16,15 +16,7 @@
               </div>
             </div>
           </div>
-          <div class="segment left aligned delete-button">
-            <div class="ui grey button">
-              <%= link_to "Edit Post", post_edit_path(id: post.id) %>
-            </div>
-            <div class="ui red button">
-              <%= link_to "Delete Post", post_path(id: post.id), method: :delete %>
-            </div>
-          </div>
-        </div>
+        </a>
       <% end %>
     </div>
   </div>

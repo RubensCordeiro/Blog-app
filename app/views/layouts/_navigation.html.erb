@@ -1,7 +1,7 @@
 <div class="ui inverted menu">
   <div class="ui container">
     <%= link_to "Home", root_path, class: "ui item" %>
-    <%= link_to "Timeline", root_path, class: "ui item" %>
+    <%= link_to "Timeline", timeline_path, class: "ui item" %>
     <%= link_to "My Posts", user_posts_path,   class: "ui item" %>
     <div class="right menu">
       <% if !current_user %>
