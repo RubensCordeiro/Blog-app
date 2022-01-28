@@ -7,6 +7,17 @@
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
           <%= devise_error_messages! %>
 
+          <div class="two fields">
+            <div class="field">
+              <%= f.label :name %>
+              <%= f.text_field :name, placeholder: "Your name" %>
+            </div>
+            <div class="field">
+              <%= f.label :surname %>
+              <%= f.text_field :surname, placeholder: "Your surname" %>
+            </div>
+          </div>
+
           <div class="field">
             <%= f.label :email %>
             <%= f.email_field :email, autofocus: true %>

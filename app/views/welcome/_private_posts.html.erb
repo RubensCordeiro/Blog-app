@@ -4,7 +4,7 @@
       <% @private_posts.each do |post| %>
         <div class="ui fluid card">
           <div class="content">
-            <div class="header"> By - <%= post.user_id %> </div>
+            <div class="header"> By - <%= User.find(post.user_id).name %> </div>
             <div class="meta"> <%= post.public == true ? "Public" : "Not Public" %> </div>
             <div class="segment card-subtitle">
               <div class="ui sub header"> <%= post.title %> </div>
