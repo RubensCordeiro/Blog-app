@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   #Users Routes
   get 'user/index', to: 'users#index'
   get 'user/posts', to: 'users#my_posts'
+
+  #Friend Routes
+  get 'friend/add', to: 'friends#add'
 end

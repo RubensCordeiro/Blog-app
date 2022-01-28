@@ -1,24 +1,8 @@
+<%= render 'welcome/public_posts' %>
 <div class="ui grid">
-  <div class="ui sixteen wide column">
-    <div class="ui button new-post-button">
-      <%= link_to "New Post", post_new_path, class: "no-decoration" %>
-    </div>
-    <div class="ui cards">
-      <% @posts.each do |post| %>
-        <a class="ui fluid card", href=" <%= post_path(id: post.id) %> ">
-          <div class="content">
-            <div class="header"> By - <%= post.user_id %> </div>
-            <div class="meta"> <%= post.public == true ? "Public" : "Not Public" %> </div>
-            <div class="segment card-subtitle">
-              <div class="ui sub header"> <%= post.title %> </div>
-              <div class="description no-decoration">
-                <%= post.summary %> 
-              </div>
-            </div>
-          </div>
-        </a>
-      <% end %>
-    </div>
+  <div class="ui fifteen wide column">
+    <div class="ui divider"></div>
+    <h3 class="ui header">Private posts you can see</h3>
   </div>
 </div>
-
+<%= render 'welcome/private_posts' %>
