@@ -11,10 +11,12 @@
   </head>
 
   <body class="bg-light">
-    <%= render 'layouts/navigation' %>
-    <div class="ui container">
-      <%= render 'layouts/messages' %>
-      <%= yield %>
+    <div class="img-container">
+      <%= render 'layouts/navigation' %>
+      <div class="ui container main-container">
+        <%= render 'layouts/messages' %>
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

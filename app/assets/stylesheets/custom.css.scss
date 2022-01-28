@@ -32,3 +32,31 @@
   overflow: auto;
   max-width: 100%;
 }
+
+html, body{
+  height: 100%;
+}
+
+.img-container{
+  background: linear-gradient(0deg, rgba(0,0,0,0.9164040616246498) 0%, rgba(130,0,0,0.7707457983193278) 50%, rgba(0,0,0,0.7651435574229692) 100%),
+  url("temaproblog.jpg");
+  background-size: auto 100%;
+  background-repeat: no-repeat center/cover;
+  background-position: top left;
+}
+
+.home{
+  min-height: 100vh;
+}
+
+.main-container{
+  padding-top: 54px
+}
+
+.navigator{
+  box-shadow: 5px 5px 2px rgba(255, 255, 255, 0.02) !important;
+}
+
+.white-letters{
+  color: white;
+}
