@@ -7,7 +7,7 @@ class WelcomeController < ApplicationController
 
   def timeline
     @posts = Post.where(public: true).order('created_at DESC')
-    @private_posts = Post.where(public: false).select {|post| @allowed_users.include?(post.user_id)}
+    @private_posts = Post.where(public: false).select { |post| @allowed_users.include?(post.user_id)}
   end
 
   private
